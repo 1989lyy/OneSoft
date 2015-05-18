@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.haier.openplatform.alm.project.dao.BaseuserDAO">
+	<!-- oracle 分页头 -->
+	<sql id="pagination_Head">
+		<![CDATA[select * from ( select row_.*, rownum rownum_ from ( ]]>
+	</sql>
+	<!-- oracle 分页尾 -->
+	<sql id="pagination_Tail">
+	  <![CDATA[) row_ where rownum <= #{model.pager.pageSize} * #{model.pager.currentPage} ) where rownum_ >= #{model.pager.firstResult} + 1]]>
+	</sql>
+	<!-- count * from -->
+	<sql id="count_Start_Head">
+		<![CDATA[select count(*) from ( ]]>
+	</sql>
+	<sql id="count_Start_Tail">
+		<![CDATA[)]]>
+	</sql>
+
+	<resultMap id="baseuserMap" type="com.haier.openplatform.alm.project.domain.Baseuser">
+	</resultMap>
+
+	<!-- 保存信息 -->
+	<insert id="saveBaseuser">
+		<selectKey keyProperty="model.id" order="BEFORE" resultType="long">
+			SELECT XXXX.NEXTVAL FROM DUAL
+		</selectKey>
+		<![CDATA[
+		insert into BASEUSER (
+			FreeMarker template error (DEBUG mode; use RETHROW in production!):
+An error has occurred when reading existing sub-variable "allLie"; see cause exception! The type of the containing value was: extended_hash+string (com.tx.gencode.domain.BeanModel wrapped into f.e.b.StringModel)
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${allLie}  [in template "DaoMapperModel.ftl" at line 36, column 25]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core._TemplateModelException: [... Exception message was already printed; see it above ...]
+	at freemarker.ext.beans.BeanModel.get(BeanModel.java:199)
+	at freemarker.core.Environment.getGlobalVariable(Environment.java:1491)
+	at freemarker.core.Environment.getVariable(Environment.java:1477)
+	at freemarker.core.Identifier._eval(Identifier.java:35)
+	at freemarker.core.Expression.eval(Expression.java:78)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:40)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.MixedContent.accept(MixedContent.java:62)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.Environment.process(Environment.java:290)
+	at freemarker.template.Template.process(Template.java:312)
+	at com.tx.gencode.main.MainTest.main(MainTest.java:48)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at freemarker.ext.beans.BeansWrapper.invokeMethod(BeansWrapper.java:1458)
+	at freemarker.ext.beans.BeanModel.invokeThroughDescriptor(BeanModel.java:255)
+	at freemarker.ext.beans.BeanModel.get(BeanModel.java:159)
+	... 12 more
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.AbstractStringBuilder.deleteCharAt(Unknown Source)
+	at java.lang.StringBuffer.deleteCharAt(Unknown Source)
+	at com.tx.gencode.domain.BeanModel.getAllLie(BeanModel.java:100)
+	... 19 more

@@ -1,0 +1,436 @@
+html,body,div,ul,li,dl,dt,dd,form,fieldset,h1,h2,h3,h4,h5,p,input,button
+	{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family:'宋体', Tahoma, Arial;
+	color: #000; 
+	font-family: 'Open Sans';
+	padding: 0px !important;
+	margin: 0px !important;
+	font-size:13px; 
+	direction: ltr;
+}
+a {
+	color: #4d4b4b;
+	text-decoration: none
+}
+
+a.opt:link {
+	color: #4d4b4b;
+}
+
+a.opt:hover {
+	color: #F61D62;
+}
+
+a.opt:active {
+	color: #F61D62;
+}
+
+a.opt:visited {
+	color: #333;
+}
+
+/* 各行换色 */
+.td_odd {
+	background-color: whitesmoke;
+}
+
+fieldset {
+	border: 1px dotted #D1D7DC;
+}
+
+legend {
+	border: 1px dotted #D1D7DC;
+	font-size: small;
+}
+/* 查询table样式 */
+.query_table {
+	border-collapse: collapse;
+	border: 1px solid #CCCCCC;
+	border-collapse: collapse;
+	empty-cells: show;
+}
+
+.query_table th {
+	font-size: 12px;
+	text-align: right;
+	border-bottom: 1px solid #A4B5C2;
+	border-right: 1px solid #A4B5C2;
+	background-color:#efefef;
+	padding-top: 5px;
+	font-weight: 100;
+	white-space: nowrap;
+	padding-left:12px;
+	padding-rihgt:8px;
+}
+
+.query_table td {
+	font-size: 9pt;
+	border-right: 1px solid #C0C0C0;
+	border-bottom: 1px solid #C0C0C0;
+	padding-left: 5px;
+	padding-top:3px;
+	padding-bottom:1px;
+	height: 19px;
+}
+.query_table td {
+	font-size: 9pt;
+	border-right: 1px solid #C0C0C0;
+	border-bottom: 1px solid #C0C0C0;
+	padding-left: 5px;
+	padding-top:3px;
+	padding-bottom:1px;
+	height: 19px;
+}
+.query_table td input{
+	height:20px;
+}
+
+/* form table样式 */
+table.show_table {
+	border: 1px solid #CCCCCC;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table.show_table td {
+	padding-top: 2px;
+	padding-left: 6px;
+	padding-right: 5px;
+	font-size: 9pt;
+	border-right: 1px solid #C0C0C0;
+	border-bottom: 1px solid #C0C0C0;
+	white-space: nowrap;
+}
+
+table.show_table th {
+	height: 22px;
+	padding: 3px;
+	border-bottom: 1px solid #A4B5C2;
+	border-right: 1px solid #A4B5C2;
+	background-color: threedlightshadow;
+	text-align: center;
+	white-space: nowrap;
+}
+
+/***
+General typography 
+***/
+h3 small, h4 small, h5 small {
+  color: #444;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+h1.block, h2.block, h3.block, h4.block, h5.block, h6.block {
+  padding-bottom: 10px;
+}
+
+a {
+  text-shadow: none !important;
+  color: #0d638f;
+}
+
+/***
+分页组件加上面6px
+***/
+.pager_row_div{
+	margin-top:5px;
+}
+.table-fixed{
+	line-height:16px;
+}
+
+/* Widget */
+
+.widget {
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 20px; 
+}
+
+.widget p{
+	margin: 3px 0px 5px 0px !important;
+	line-height: 20px;
+}
+.widget form{
+	margin: 0px;
+}
+
+.widget hr{
+	margin: 8px 0px;
+	border-top: 1px solid #a0a1a2;
+	border-bottom: 1px solid #fff;
+}
+
+.widget .table{
+	margin: 0px;
+	width: 100%;
+}
+
+.widget .table-bordered{
+	border-radius: 0px;
+	border: 0px;
+}
+
+.widget .table-bordered td:first-child, .widget .table-bordered th:first-child{
+	border-left: 0px;
+}
+
+.widget .table-bordered thead:first-child tr:first-child > th:first-child, 
+.widget .table-bordered tbody:first-child tr:first-child > td:first-child {
+	border-radius: 0px;
+}
+
+.widget.wblack{
+  color: #ddd;
+  border: 1px solid #222;
+}
+
+.widget.wblack hr{
+	border-top: 1px solid #444;
+	border-bottom: 1px solid #222;
+}
+
+.widget.wblack a{
+	color: #aaa;
+}
+
+.widget.wblack a:hover{
+	color: #888;
+}
+
+.widget .padd, .modal-body{
+	padding: 13px 15px;
+}
+
+.widget .widget-head,.modal-header{
+  background-color: #f8f8f8;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f2f2f2));
+  background: -webkit-linear-gradient(top, #f8f8f8, #f2f2f2);
+  background: -moz-linear-gradient(top, #f8f8f8, #f2f2f2);
+  background: -ms-linear-gradient(top, #f8f8f8, #f2f2f2);
+  background: -o-linear-gradient(top, #f8f8f8, #f2f2f2);
+  background: linear-gradient(top, #f8f8f8, #f2f2f2);	
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  text-shadow:0px 1px #fff;
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #fff;
+	font-size: 13px;
+	padding: 4px 15px;
+}
+
+.widget.wblack .widget-head{
+  background-color: #333;
+  background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#111));
+  background: -webkit-linear-gradient(top, #333, #111);
+  background: -moz-linear-gradient(top, #333, #111);
+  background: -ms-linear-gradient(top, #333, #111);
+  background: -o-linear-gradient(top, #333, #111);
+  background: linear-gradient(top, #333, #111);
+  text-shadow:0px 1px #000;
+  border-bottom: 1px solid #555;
+  border-top: 1px solid #666;
+  box-shadow: inset 0px 1px 1px #444;
+  color: #303030;
+}
+
+.widget .widget-head .widget-icons i{
+	font-size: 14px;
+	margin: 0px 4px;
+}
+
+.widget .widget-head .widget-icons a{
+	color: #aaa;
+}
+
+.widget .widget-head .widget-icons a:hover{
+	color: #FE697D;
+}
+
+.widget.wblack .widget-head .widget-icons i{
+	font-size: 14px;
+	margin: 0px 4px;
+}
+.widget .widget-content {
+	-overflow: auto;
+}
+.widget .widget-foot, .modal-footer{
+  background-color: #f8f8f8;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f2f2f2));
+  background: -webkit-linear-gradient(top, #f8f8f8, #f2f2f2);
+  background: -moz-linear-gradient(top, #f8f8f8, #f2f2f2);
+  background: -ms-linear-gradient(top, #f8f8f8, #f2f2f2);
+  background: -o-linear-gradient(top, #f8f8f8, #f2f2f2);
+  background: linear-gradient(top, #f8f8f8, #f2f2f2);	
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  text-shadow:0px 1px #fff;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  padding: 1px 15px;
+  font-size: 12px;
+  color: #555;
+  box-shadow: inset 0px 1px 1px #fff;
+  text-align: right;
+}
+
+.widget.wblack .widget-foot{
+  background-color: #111;
+  background: -webkit-gradient(linear, left top, left bottom, from(#222), to(#111));
+  background: -webkit-linear-gradient(top, #222, #111);
+  background: -moz-linear-gradient(top, #222, #111);
+  background: -ms-linear-gradient(top, #222, #111);
+  background: -o-linear-gradient(top, #222, #111);
+  background: linear-gradient(top, #222, #111);
+  text-shadow:0px 1px #000;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #222;
+  color: #aaa;
+  box-shadow: inset 0px 1px 1px #444;
+}
+/* Widget white extras */
+
+.widget .nav-tabs > li a {
+   	padding: 5px 10px;
+}
+
+.widget .nav-tabs {
+	margin-bottom: 5px;
+}
+
+.widget .tab-content{
+	margin-bottom: 10px;
+}
+
+/* Widget black extras */
+
+.widget.wblack .btn-inverse{
+	border: 1px solid #212121;
+}
+
+.widget.wblack a.btn-primary, .widget.wblack a.btn-primary:hover, 
+.widget.wblack a.btn-warning, .widget.wblack a.btn-warning:hover,
+.widget.wblack a.btn-danger,  .widget.wblack a.btn-danger:hover,
+.widget.wblack a.btn-success, .widget.wblack a.btn-success:hover,
+.widget.wblack a.btn-info,  .widget.wblack a.btn-info:hover,
+.widget.wblack a.btn-inverse, .widget.wblack a.btn-inverse:hover{
+    color: #fff;
+}
+
+.widget.wblack .form-actions{
+	border-radius: 5px;
+  background-color: #111;
+  background: -webkit-gradient(linear, left top, left bottom, from(#222), to(#111));
+  background: -webkit-linear-gradient(top, #222, #111);
+  background: -moz-linear-gradient(top, #222, #111);
+  background: -ms-linear-gradient(top, #222, #111);
+  background: -o-linear-gradient(top, #222, #111);
+  background: linear-gradient(top, #222, #111);
+	border: 1px solid #111;
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+
+.widget.wblack h2,
+.widget.wblack h3,
+.widget.wblack h4,
+.widget.wblack h5,
+.widget.wblack h6{
+	color: #ddd;
+}
+
+.widget.wblack blockquote{
+	border-left: 3px solid #555;
+}
+
+.widget.wblack .pagination ul > li > a, .widget.wblack .pagination ul > li > span {
+  background-color: #111;
+  background: -webkit-gradient(linear, left top, left bottom, from(#222), to(#111));
+  background: -webkit-linear-gradient(top, #222, #111);
+  background: -moz-linear-gradient(top, #222, #111);
+  background: -ms-linear-gradient(top, #222, #111);
+  background: -o-linear-gradient(top, #222, #111);
+  background: linear-gradient(top, #222, #111);
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+  border: 1px solid #161616;
+}
+
+.widget.wblack .pagination ul > li > a:hover{
+	background: #222;
+}
+
+.widget.wblack .table td{
+	border-top: 1px solid #222;
+}
+
+.widget.wblack .table tr:hover{
+	background: rgba(255,255,255,0.1);
+}
+
+.widget.wblack .nav-tabs > .active > a, .widget.wblack .nav-tabs > .active > a:hover {
+	background: #222;
+}
+
+.widget.wblack .nav-tabs {
+    margin-bottom: 5px;
+    border-bottom: 1px solid #222;
+}
+
+.widget.wblack .nav-tabs > li a {
+   	padding: 5px 10px;
+  	background-color: #111;
+  	background: -webkit-gradient(linear, left top, left bottom, from(#222), to(#111));
+ 	background: -webkit-linear-gradient(top, #222, #111);
+  	background: -moz-linear-gradient(top, #222, #111);
+  	background: -ms-linear-gradient(top, #222, #111);
+  	background: -o-linear-gradient(top, #222, #111);
+  	background: linear-gradient(top, #222, #111);
+    border: 1px solid #222;
+    border-bottom: 0px;
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+    color: #a0a1a2;
+    font-weight: bold;
+    margin-right: 5px; 
+}
+
+.widget.wblack .nav-tabs > li a:hover {
+    background: #222; 
+}
+
+.widget.wblack .nav-tabs > li.active {
+    border-bottom: 0px; 
+}
+
+.widget.wblack .nav-tabs > li.active a {
+    color: #fff;
+    border-bottom: 0px;
+}
+
+.widget.wblack .nav-tabs > li.active a:hover {
+    border-bottom: 0px; 
+}
+
+.widget.wblack .tab-content{
+	margin-bottom: 10px;
+}
+.table th, .table td {
+    border-top: 1px solid #ddd;
+    line-height: 20px;
+    padding: 4px;
+    text-align: left;
+    vertical-align: top;
+}
+.table .bzhu{
+    line-height: 20px;
+    padding: 4px;
+    text-align: right;
+    vertical-align: middle;
+}
+

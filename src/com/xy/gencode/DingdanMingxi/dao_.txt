@@ -1,0 +1,53 @@
+package com.haier.openplatform.alm.project.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
+import com.haier.openplatform.alm.project.domain.DingdanMingxi;
+import com.haier.openplatform.alm.project.model.DingdanMingxiSearchModel;
+import com.haier.openplatform.dao.CommonDAO;
+
+/**
+ * 对DingdanMingxi实体进行CRUD操作
+ */
+public interface DingdanMingxiDAO extends CommonDAO{	
+
+	/**
+	 * @param dingdanMingxi
+	 * 添加
+	 */
+	public void saveDingdanMingxi(@Param("model") DingdanMingxi dingdanMingxi);	
+	/**
+	 * @param dingdanMingxi
+	 * 删除
+	 */
+	public void delDingdanMingxi(@Param("model") DingdanMingxi dingdanMingxi);
+	/**
+	 * @param dingdanMingxi
+	 * 修改
+	 */
+	public void updateDingdanMingxi(@Param("model") DingdanMingxi dingdanMingxi);
+	
+	/**
+	 * @param 
+	 * @return 查找
+	 */
+	public DingdanMingxi getDingdanMingxiById(@Param("id") Long id);
+	/**
+	 * @param 
+	 * @return 查找
+	 */
+	public DingdanMingxi getDingdanMingxiByDingdanMingxi(@Param("model") DingdanMingxi dingdanMingxi);
+	
+	/**
+	 * @param model
+	 */
+	public List<DingdanMingxi> searchDingdanMingxiPagerList(@Param("model") DingdanMingxi dingdanMingxi);
+	/**
+	 * @param model
+	 * @return
+	 */
+	public long getDingdanMingxisPagerCount(@Param("model") DingdanMingxi dingdanMingxi);
+	
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.action.extension" value="do,action"/>
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.serve.static" value="true" />
+	<constant name="struts.action.excludePattern" value="/remoting/.*,/ws/.*" />
+	<constant name="struts.xwork.chaining.copyErrors" value="true" />
+	<constant name="struts.xwork.chaining.copyFieldErrors" value="true" />
+	<constant name="struts.xwork.chaining.copyMessages" value="true" />
+	<!-- 指定允许上传的文件最大字节数。默认值是2097152(2M) -->
+	<!-- 最大设置1gb -->
+	<constant name="struts.multipart.maxSize" value="2147483648" />
+	
+	<package name="etongx" extends="json-default" namespace="/">
+	
+		<result-types>
+    		<result-type name="jsonResult" class="com.tx.ehop.common.util.CommResultType"></result-type>
+    	</result-types>
+	
+<!-- 		<interceptors> -->
+<!-- 			<interceptor name="loginContextInterceptor" class="com.haier.fta.webapp.interceptor.LoginContextInterceptor" /> -->
+<!-- 			<interceptor name="pageInterceptor" class="com.haier.fta.webapp.interceptor.PageInterceptor" /> -->
+<!-- 		</interceptors> -->
+<!-- 		<default-interceptor-ref name="jsonCRUDStack" /> -->
+		
+<!-- 		<global-results> -->
+<!-- 			<result name="login" type="redirect">/login.jsp</result> -->
+<!-- 			<result name="sys_error">/WEB-INF/pages/sys_error.jsp</result> -->
+<!-- 		</global-results> -->
+<!-- 		<global-exception-mappings> -->
+<!-- 			<exception-mapping result="sys_error" exception="com.haier.openplatform.SysException" /> -->
+<!-- 		</global-exception-mappings> -->
+		
+	</package>
+	<!-- 系统管理模块 -->
+	<include file="struts/struts-basic.xml" />
+	
+</struts>

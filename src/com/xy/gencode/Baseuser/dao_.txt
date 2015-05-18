@@ -1,0 +1,53 @@
+package com.haier.openplatform.alm.project.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
+import com.haier.openplatform.alm.project.domain.Baseuser;
+import com.haier.openplatform.alm.project.model.BaseuserSearchModel;
+import com.haier.openplatform.dao.CommonDAO;
+
+/**
+ * 对Baseuser实体进行CRUD操作
+ */
+public interface BaseuserDAO extends CommonDAO{	
+
+	/**
+	 * @param baseuser
+	 * 添加
+	 */
+	public void saveBaseuser(@Param("model") Baseuser baseuser);	
+	/**
+	 * @param baseuser
+	 * 删除
+	 */
+	public void delBaseuser(@Param("model") Baseuser baseuser);
+	/**
+	 * @param baseuser
+	 * 修改
+	 */
+	public void updateBaseuser(@Param("model") Baseuser baseuser);
+	
+	/**
+	 * @param 
+	 * @return 查找
+	 */
+	public Baseuser getBaseuserById(@Param("id") Long id);
+	/**
+	 * @param 
+	 * @return 查找
+	 */
+	public Baseuser getBaseuserByBaseuser(@Param("model") Baseuser baseuser);
+	
+	/**
+	 * @param model
+	 */
+	public List<Baseuser> searchBaseuserPagerList(@Param("model") Baseuser baseuser);
+	/**
+	 * @param model
+	 * @return
+	 */
+	public long getBaseusersPagerCount(@Param("model") Baseuser baseuser);
+	
+}

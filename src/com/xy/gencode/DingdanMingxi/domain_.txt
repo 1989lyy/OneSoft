@@ -1,0 +1,5 @@
+package com.haier.openplatform.alm.project.domain;
+import com.haier.openplatform.domain.BaseDomain;
+
+public class DingdanMingxi extends SearchModel{
+}
